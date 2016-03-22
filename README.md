@@ -18,7 +18,7 @@ and
 export :: (MixpanelQuery a, FromJSON b) => MixpanelConfig -> a -> IO [Maybe b]
 ```
 
-The only differece between these two functions is `mixpanel` can be used to query all of mixpanels query endpoints other than events export, while `export` handles exporing events. The reason for this division is the event export retrurns afile with new line separated json objects instead of a valid json object. That difference can be seen in the signatures of both functions, where `mixpanel` returns a single json value, `export` returns a list of them.
+The only differece between these two functions is `mixpanel` can be used to query all of mixpanels query endpoints other than events export, while `export` handles exporing events. The reason for this division is the event export retrurns a file with new line separated json objects instead of a valid json object. That difference can be seen in the signatures of both functions, where `mixpanel` returns a single json value, `export` returns a list of them.
 
 ### MixpanelConfig
 
